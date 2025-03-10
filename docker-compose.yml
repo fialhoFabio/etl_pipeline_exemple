@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: finance_data_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - finance_data:/var/lib/postgresql/data
+
+volumes:
+  finance_data:

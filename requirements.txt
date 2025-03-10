@@ -1,0 +1,4 @@
+prefect
+psycopg2
+pandas
+yfinance
